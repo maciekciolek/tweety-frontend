@@ -1,0 +1,29 @@
+<div class="row" id="event-show">
+    <div class="large-12 columns">
+        <h1>{{vm.event.name}}</h1>
+
+        <div class="panel">
+            <p>{{vm.event.description}}</p>
+        </div>
+        <div class="row">
+            <div class="large-6 columns">
+                <h3>Comments</h3>
+            </div>
+            <div class="large-6 columns text-right">
+                <button class="button" ng-click="vm.addComment()" show-authenticated>{{'events.show.addComment' | translate}}</button>
+            </div>
+        </div>
+
+
+        <div class="comments">
+            <div class="comment" ng-repeat="c in vm.event.comments">
+                <div class="panel">
+                    <p>{{c.content}}</p>
+
+                    <div class="author"><strong>{{c.author_name}}</strong>, {{c.created_at | date :'medium'}}</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

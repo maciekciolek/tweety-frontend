@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="large-12 columns">
+        <h1>{{'auth.login' | translate}}</h1>
+
+        <div class="text-center" ng-show="!vm.success">
+            <a ng-click="vm.login()" class="button">{{'auth.login.button' | translate}}</a>
+        </div>
+        <div class="alert-box success" ng-show="vm.success">{{'auth.login.success' | translate}}</div>
+    </div>
+</div>

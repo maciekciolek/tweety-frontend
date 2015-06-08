@@ -1,0 +1,17 @@
+#event-show .author{
+    font-size: 12px;
+    text-align: right;
+}
+
+#event-show .comments{
+    overflow: hidden;
+}
+#event-show .comment{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+#event-show h3{
+    margin-top: 6px;
+}

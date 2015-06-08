@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="tweety">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>tweety</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/app.css -->
+    <link rel="stylesheet" type="text/css" href="tmp/app.css"/>
+    <!-- endbuild -->
+
+</head>
+<body>
+
+<nav class="top-bar" data-topbar>
+    <ul class="title-area">
+
+        <li class="name">
+            <h1>
+                <a href="#">
+                    Tweety
+                </a>
+            </h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+        <ul class="left">
+            <li class="divider"></li>
+            <li><a ui-sref="events.list">{{'events.list' | translate}}</a></li>
+            <li><a ui-sref="events.create" show-authenticated-creator>{{'events.create' | translate}}</a></li>
+            <li><a ui-sref="auth.login">{{'auth.login' | translate}}</a></li>
+        </ul>
+    </section>
+</nav>
+
+
+<div class="row">
+    <div class="large-12 columns">
+        <ui-view></ui-view>
+    </div>
+</div>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="vendor/modernizr/modernizr.js"></script>
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/underscore/underscore.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="vendor/angular-resource/angular-resource.js"></script>
+<script src="vendor/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="vendor/moment/moment.js"></script>
+<script src="vendor/fastclick/lib/fastclick.js"></script>
+<script src="vendor/jquery.cookie/jquery.cookie.js"></script>
+<script src="vendor/jquery-placeholder/jquery.placeholder.js"></script>
+<script src="vendor/angular-translate/angular-translate.js"></script>
+<script src="vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="vendor/angular-facebook/lib/angular-facebook.js"></script>
+<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="vendor/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+<script src="vendor/angular-http-auth/src/http-auth-interceptor.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js scripts/app.js -->
+<!-- Main App JS -->
+<script src="app.js"></script>
+<script src="core.js"></script>
+
+<script src="modules/events/events.js"></script>
+<script src="modules/events/partial/eventCreate/eventCreate.js"></script>
+<script src="modules/events/partial/eventList/eventList.js"></script>
+<script src="service/EventsService.js"></script>
+<script src="service/ApplicationConfig.js"></script>
+<script src="modules/events/partial/eventShow/eventShow.js"></script>
+<script src="modules/auth/auth.js"></script>
+<script src="modules/auth/partial/login/login.js"></script>
+<script src="service/AuthService.js"></script>
+<script src="service/UsersService.js"></script>
+<script src="service/AuthInterceptor.js"></script>
+<script src="modules/auth/partial/register/register.js"></script>
+<script src="modules/events/addComment/addComment.js"></script>
+<script src="service/CommentsService.js"></script>
+<script src="directive/showAuthenticated.js"></script>
+<script src="directive/showAuthenticatedCreator.js"></script>
+<!-- Add New Component JS Above -->
+
+<!-- endbuild -->
+
+
+</body>
+</html>

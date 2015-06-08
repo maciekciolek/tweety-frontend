@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="large-12 columns">
+        <h1>{{'events.list' | translate}}</h1>
+
+        <div class="panel" ng-repeat="event in vm.events">
+            <h2>{{event.name}}</h2>
+
+            <p>{{event.description}}</p>
+
+            <div class="text-right">
+                <a ui-sref="events.show({eventId: event.id})" class="button">{{'events.show' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</div>
