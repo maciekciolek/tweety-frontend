@@ -1,7 +1,5 @@
 node_modules
-build/*
 .sass-cache
 app/vendor
 *.iml
 .idea/
-!build/*.config.js
