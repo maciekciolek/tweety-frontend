@@ -90,31 +90,6 @@ try { module = angular.module("templates"); }
 catch(err) { module = angular.module("templates", []); }
 module.run(["$templateCache", function($templateCache) {
   "use strict";
-  $templateCache.put("modules/events/partial/eventList/eventList.html",
-    "<div class=\"row\">\n" +
-    "    <div class=\"large-12 columns\">\n" +
-    "        <h1>{{'events.list' | translate}}</h1>\n" +
-    "\n" +
-    "        <div class=\"panel\" ng-repeat=\"event in vm.events\">\n" +
-    "            <h2>{{event.name}}</h2>\n" +
-    "\n" +
-    "            <p>{{event.description}}</p>\n" +
-    "\n" +
-    "            <div class=\"text-right\">\n" +
-    "                <a ui-sref=\"events.show({eventId: event.id})\" class=\"button\">{{'events.show' | translate}}</a>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "");
-}]);
-})();
-
-(function(module) {
-try { module = angular.module("templates"); }
-catch(err) { module = angular.module("templates", []); }
-module.run(["$templateCache", function($templateCache) {
-  "use strict";
   $templateCache.put("modules/events/partial/eventCreate/eventCreate.html",
     "<div class=\"row\">\n" +
     "    <div class=\"large-12 columns\">\n" +
@@ -147,6 +122,31 @@ module.run(["$templateCache", function($templateCache) {
     "    </div>\n" +
     "\n" +
     "\n" +
+    "</div>\n" +
+    "");
+}]);
+})();
+
+(function(module) {
+try { module = angular.module("templates"); }
+catch(err) { module = angular.module("templates", []); }
+module.run(["$templateCache", function($templateCache) {
+  "use strict";
+  $templateCache.put("modules/events/partial/eventList/eventList.html",
+    "<div class=\"row\">\n" +
+    "    <div class=\"large-12 columns\">\n" +
+    "        <h1>{{'events.list' | translate}}</h1>\n" +
+    "\n" +
+    "        <div class=\"panel\" ng-repeat=\"event in vm.events\">\n" +
+    "            <h2>{{event.name}}</h2>\n" +
+    "\n" +
+    "            <p>{{event.description}}</p>\n" +
+    "\n" +
+    "            <div class=\"text-right\">\n" +
+    "                <a ui-sref=\"events.show({eventId: event.id})\" class=\"button\">{{'events.show' | translate}}</a>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
     "</div>\n" +
     "");
 }]);

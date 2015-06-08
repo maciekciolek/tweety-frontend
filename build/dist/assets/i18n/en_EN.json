@@ -1,0 +1,22 @@
+{
+    "events.list": "Event list",
+    "events.create": "Create event",
+    "events.create.meetup": "Meetup Link",
+    "events.create.twitter": "Twitter Tag",
+    "events.create.required": "Field is required!",
+    "events.show": "Show event",
+    "auth.login": "Log in",
+    "auth.login.success" : "Login finished successful!",
+    "auth.login.button":"Click to log in with Facebook",
+    "auth.register": "Register",
+    "auth.register.login": "Login",
+    "auth.register.type": "Choose type",
+    "auth.register.commenter": "Commenter",
+    "auth.register.creator": "Creator",
+    "auth.register.success": "Register finished successfully!",
+    "events.show.addComment": "Add comment",
+    "events.show.text": "Your text",
+    "events.show.comment.success": "Thanks for adding comment :)",
+    "events.show.comment.error": "Error while adding comment :(",
+    "events.create.success": "Event created successfully."
+}

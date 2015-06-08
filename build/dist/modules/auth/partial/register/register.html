@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="large-12 columns">
+        <h1>{{'auth.register' | translate}}</h1>
+
+        <div class="alert-box success" ng-show="vm.success">{{'auth.register.success' | translate}}</div>
+        <div class="alert-box alert" ng-repeat="(key, value) in vm.errors">{{key}} {{value[0]}}</div>
+
+        <form name="form" ng-show="!vm.success" novalidate>
+            <div class="row">
+                <div class="large-12 columns">
+                    <label>{{'auth.register.login' | translate}}
+                        <input type="text" placeholder="{{'auth.register.login' | translate}}"
+                               ng-model="vm.registerData.login" required=""/>
+                    </label>
+                </div>
+                <div class="large-12 columns">
+                    <label>{{'auth.register.type' | translate}}</label>
+                    <select ng-options="t.type as t.translation for t in vm.types" ng-model="vm.registerData.type" required=""></select>
+                </div>
+                <div class="text-center">
+                    <button type="submit" ng-click="vm.register()" class="button" ng-disabled="form.$invalid">{{'auth.register' | translate}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

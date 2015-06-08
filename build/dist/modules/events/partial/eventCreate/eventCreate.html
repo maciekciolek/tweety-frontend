@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="large-12 columns">
+        <h1>{{'events.create' | translate}}</h1>
+
+        <div class="alert-box success" ng-show="vm.success">{{'events.create.success' | translate}}</div>
+        <div class="alert-box alert" ng-show="vm.error !== false">{{vm.error}}</div>
+
+        <form name="form" ng-show="!vm.success" novalidate>
+            <div class="row">
+                <div class="large-12 columns" ng-class="{error: !form.meetup.$pristine && form.meetup.$invalid}">
+                    <label>{{'events.create.meetup' | translate}}
+                        <input type="text" ng-model="vm.event.meetup_link" name="meetup" required/>
+                    </label>
+                    <small class="error" ng-show="!form.meetup.$pristine && form.meetup.$invalid">{{'events.create.required' | translate}}</small>
+                </div>
+                </div>
+            <div class="row">
+                <div class="large-12 columns" ng-class="{error: !form.twitter.$pristine && form.twitter.$invalid}">
+                    <label>{{'events.create.twitter' | translate}}
+                        <input type="text" ng-model="vm.event.twitter_tag" name="twitter" required/>
+                    </label>
+                    <small class="error" ng-show="!form.twitter.$pristine && form.twitter.$invalid">{{'events.create.required' | translate}}</small>
+                </div>
+            </div>
+            <div class="row text-center">
+                <button type="button" class="button small" ng-disabled="form.$invalid" ng-click="vm.createEvent()">{{'events.create' | translate}}</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
