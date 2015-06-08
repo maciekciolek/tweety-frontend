@@ -4,7 +4,7 @@
 
     function ApplicationConfig() {
         return {
-            apiAddress: 'http://7ada2a0a.ngrok.io/api'
+            apiAddress: '/api'
         }
     }
 
